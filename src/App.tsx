@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [ count, setCount] = React.useState(0);
   return (
     <div className="App">
       <header className="App-header">
@@ -18,7 +19,8 @@ function App() {
         >
           Learn React
         </a>
-        <button>Click Me!</button>
+        <h1>{count}</h1>
+        <button onClick={()=> setCount(count + 1)}>Click Me!</button>
       </header>
     </div>
   );
